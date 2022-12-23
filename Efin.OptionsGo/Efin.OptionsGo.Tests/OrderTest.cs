@@ -1,9 +1,14 @@
-namespace Efin.OptionsGo.Tests
+using Xunit.Abstractions;
+
+namespace Efin.OptionsGo.Models.Tests
 {
     public class OrderTest
     {
         public class FromTest
         {
+            private readonly   ITestOutputHelper output;
+            public FromTest(ITestOutputHelper helper) => output = helper;
+
             [Fact]
             public void BasicLongFu()
             {
@@ -17,6 +22,24 @@ namespace Efin.OptionsGo.Tests
                 Assert.Equal(expected: "S50X99", actual: o.Symbol);
                 Assert.Equal(expected: OrderSide.Long, actual: o.Side);
                 Assert.Equal(expected: 1, actual: o.Contracts);
+                output.WriteLine(text);
+
+            }
+
+            [Fact]
+            public void BasicLongOp()
+            {
+                //Arrange
+                var text = "LC @950 x 1";
+                //Act
+                Order? o = Order.Fromtext(text);
+                //Assert
+                Assert.NotNull(o);
+                Assert.Equal(expected: 950.0, actual: o.Price);
+                Assert.Equal(expected: "S50X99C1000", actual: o.Symbol);
+                Assert.Equal(expected: OrderSide.Long, actual: o.Side);
+                Assert.Equal(expected: 1, actual: o.Contracts);
+                output.WriteLine(text);
 
             }
 
@@ -77,7 +100,7 @@ namespace Efin.OptionsGo.Tests
             public void InvalidSyntax_ReturnNull()
             {
                 //Arrange
-                var text = "XX @500 x 1";
+                var text = "XLF  @500 x 1";
 
                 //Act
                 Order? o = Order.Fromtext(text);
@@ -127,6 +150,24 @@ namespace Efin.OptionsGo.Tests
 
             }
         }
-        
+
+        public class calculateProfitLoss
+        {
+            [Fact]
+            public void CalculateProfitLoss()
+            {
+
+                //Arrange
+                var text = "LF @950 x 1";
+                //Act
+                Order? o = Order.Fromtext(text);
+                double v = o.calculateProfitLoss(955);
+                //Assert
+                Assert.NotNull(o);
+                Assert.Equal(expected: 5.0, actual: v);
+            }
+        }
+
+
     }
 }

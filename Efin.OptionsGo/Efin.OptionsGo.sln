@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Efin.OptionsGo", "Efin.OptionsGo\Efin.OptionsGo.csproj", "{A4505D3C-2895-4B5C-A2F6-1209596EB46B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Efin.OptionsGo.Models", "Efin.OptionsGo\Efin.OptionsGo.Models.csproj", "{A4505D3C-2895-4B5C-A2F6-1209596EB46B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Efin.OptionsGo.Tests", "Efin.OptionsGo.Tests\Efin.OptionsGo.Tests.csproj", "{BC1B3599-4594-4A0B-B477-10BB387764D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Efin.OptionsGo.Tests", "Efin.OptionsGo.Tests\Efin.OptionsGo.Tests.csproj", "{BC1B3599-4594-4A0B-B477-10BB387764D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Efin.OptionsGo.APIs", "Efin.OptionsGo.APIs\Efin.OptionsGo.APIs.csproj", "{48C72DF2-24F7-41DE-BA09-67BF54DC9F93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Efin.OptionsGo.Services", "Efin.OptionsGo.Services\Efin.OptionsGo.Services.csproj", "{42CCF29F-34B2-43CB-AE09-CAF05AB55632}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{BC1B3599-4594-4A0B-B477-10BB387764D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC1B3599-4594-4A0B-B477-10BB387764D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC1B3599-4594-4A0B-B477-10BB387764D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48C72DF2-24F7-41DE-BA09-67BF54DC9F93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48C72DF2-24F7-41DE-BA09-67BF54DC9F93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48C72DF2-24F7-41DE-BA09-67BF54DC9F93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48C72DF2-24F7-41DE-BA09-67BF54DC9F93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42CCF29F-34B2-43CB-AE09-CAF05AB55632}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42CCF29F-34B2-43CB-AE09-CAF05AB55632}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42CCF29F-34B2-43CB-AE09-CAF05AB55632}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42CCF29F-34B2-43CB-AE09-CAF05AB55632}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

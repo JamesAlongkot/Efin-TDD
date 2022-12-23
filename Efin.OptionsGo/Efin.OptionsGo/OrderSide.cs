@@ -1,4 +1,4 @@
-﻿namespace Efin.OptionsGo
+﻿namespace Efin.OptionsGo.Models
 {
     public enum OrderSide
     {

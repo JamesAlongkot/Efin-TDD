@@ -32,7 +32,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Efin.OptionsGo\Efin.OptionsGo.csproj" />
+    <ProjectReference Include="..\Efin.OptionsGo\Efin.OptionsGo.Models.csproj" />
   </ItemGroup>
 
 </Project>
